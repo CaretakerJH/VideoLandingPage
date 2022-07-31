@@ -8,10 +8,11 @@ const data = {
 
      /*strings to the location of the genres of films */
     actionGenre:'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/genre?genres[]=%3Cgenre%3E&genres[]=action',
-    adventureGenre: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/genre?genres[]=<genre>&genres[]=<genre>',
-    animationGenre: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/genre?genres[]=<genre>&genres[]=<genre>'
+    adventureGenre: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/genre?genres[]=<genre>&genres[]=adventure',
+    animationGenre: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/genre?genres[]=<genre>&genres[]=animation',
 
     /*adding some comments*/
+    guidTest: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/9e04b68e-4a92-4f73-8f53-71ab93b78dda'
 }
 
 export default data;

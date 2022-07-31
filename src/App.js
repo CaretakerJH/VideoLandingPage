@@ -3,16 +3,20 @@ import data from './data';
 import Row from './Row';
 import Nav from './Nav';
 import Banner from './Banner';
+import Movies from './Movies';
+import {Route, Routes, Link} from 'react-router-dom';
+import React from 'react';
+
 
 
 function App() {
 
   return (
     <div className="App">
+      <Routes><Route  path="/movies" exact element={<Movies/>} /></Routes>
       <Banner></Banner>
-      <Nav></Nav>
-      <h1>I'm, actually the best and this is easy. BELIEVE.</h1>
-      <Row title="Hello"></Row>
+      <Nav></Nav>  
+      <Row></Row>
     </div>  
   );
 }

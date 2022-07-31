@@ -4,7 +4,7 @@ import axios from 'axios';
 import data from "./data.js";
 
 
-function Banner(){
+function Moviesbanner(){
     //variable creation
     const [movie, setMovieBackground] = useState([]);
     const [text, setDescription] = useState([]);
@@ -15,11 +15,10 @@ function Banner(){
     useEffect(() => {
         async function fetchData(){
           //data retrieval request  
-          const request = await axios.get(data.actionGenre);
-          const guid = await axios.get(data.guidTest);
+          const request = await axios.get(data.movieType);
           const size = request.data.length;  
           const random = Math.floor(Math.random() * (size + 1));
-          console.log(guid);  
+   
           //data storage
           setMovieBackground(request.data[random].metadata.images[1].url);
           setDescription( request.data[random].description);
@@ -56,6 +55,6 @@ function Banner(){
     </header>
     );
 }
-    export default Banner;
+    export default Moviesbanner;
         
             
