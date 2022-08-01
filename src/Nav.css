@@ -3,18 +3,19 @@
     top:0;
     width: 100%;
     display:flex;
-
-    color:white
+    color:black;
 }
-
+.links a{
+    color:red;
+    text-decoration: none;
+}
 .links{
+    list-style: none;
     margin-right: 20px;
     cursor: pointer;
     padding-top:20px;
     padding-left:10px;
-    text-transform: uppercase;
-    color:white;
-    
+    text-transform: uppercase; 
 }
 
 .nav__logo{
@@ -32,4 +33,12 @@
     width:30px;
     object-fit: contain;
     padding: 20px;
+}
+
+.homebanner{
+    height:1000px;
+}
+
+.collection__banner{
+    height:440px;
 }

@@ -12,7 +12,7 @@ const data = {
     animationGenre: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/genre?genres[]=<genre>&genres[]=animation',
 
     /*adding some comments*/
-    guidTest: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/9e04b68e-4a92-4f73-8f53-71ab93b78dda'
+    guidTest: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/7971ad4b-0c9c-415d-b442-7d97f7ba70b4'
 }
 
 export default data;

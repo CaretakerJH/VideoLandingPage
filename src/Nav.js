@@ -15,13 +15,11 @@ function Nav(){
             alt="Netflix Profile"    
             />
 
-            <li className="links"><Link to="/dashboard">Dashboard</Link></li>
-
-            <li className="links"><Link to="/movies">Movies</Link></li>
-
-            <li className="links"><Link to="/series">Series</Link></li>
-
-            <li className="links"><Link to="/collections">Collections</Link></li>
+            <li className="links"><Link to="">HOME</Link></li>    
+            <li className="links"><Link to="/movies">MOVIES</Link></li>
+            <li className="links"><Link to="/series">SERIES</Link></li>
+            <li className="links"><Link to="/collections">COLLECTIONS</Link></li>
+            <li className="links"><Link to="/player">PLAYER</Link></li>
 
         </div>
     )

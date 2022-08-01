@@ -3,7 +3,7 @@ import axios from 'axios';
 import './row.css';
 import data from './data';
 
-function Row( { collection } ) {
+function MovieRow() {
 
     {/* setting state for creating variables in react */}
     const [movies, setMovies] = useState([]);
@@ -16,11 +16,7 @@ function Row( { collection } ) {
             //requesting data from URL
             async function fetchData(){              
                 const request = await axios.get(data.movieType);
-                console.log(request);
-                setCounter(counter + 1);
                 setMovies(request.data);
-                setTitle(request.data.name)
-                console.log(title);
                 return request;
             }
             fetchData();
@@ -31,7 +27,7 @@ function Row( { collection } ) {
          return (
              <div className="row">
                 {/* title */}
-                <h2 >{"Other Titles"}</h2>
+                <h2 >{"More Movies"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div className='row__posters'>
                     
@@ -46,4 +42,4 @@ function Row( { collection } ) {
     )
 }
 
-export default Row
+export default MovieRow

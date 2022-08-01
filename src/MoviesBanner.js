@@ -11,6 +11,7 @@ function Moviesbanner(){
     const [title, setTitle] = useState([]);
     const [rating, setRating] = useState([]);
     const [year, setYear] = useState([]);
+    
 
     useEffect(() => {
         async function fetchData(){
@@ -18,7 +19,6 @@ function Moviesbanner(){
           const request = await axios.get(data.movieType);
           const size = request.data.length;  
           const random = Math.floor(Math.random() * (size + 1));
-   
           //data storage
           setMovieBackground(request.data[random].metadata.images[1].url);
           setDescription( request.data[random].description);
@@ -46,7 +46,7 @@ function Moviesbanner(){
              <button className ="banner__button">My List</button>
              
          </div>
-         <h1 className="banner__rating">{"| RATING : " + rating + " | YEAR : " + year + " |"}</h1>
+        <h1 className="banner__rating">{"| RATING : " + rating + " | YEAR : " + year + " |"}</h1>
         <h1 className="banner__overview"><i>{"Overview: "}</i></h1>
         <h1 className="banner__description">{text}</h1>
 

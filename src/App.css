@@ -1,7 +1,14 @@
 .App {
     background-color: #090909;
 }
+
+.body{
+    background-color: black;
+}
 .Movies{
+    background-color: #090909;
+}
+.Collections{
     background-color: #090909;
 }
 

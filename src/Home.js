@@ -2,21 +2,16 @@ import './App.css';
 import data from './data';
 import MovieRow from './MovieRow';
 import Nav from './Nav';
-import Moviesbanner from './MoviesBanner.js'
+import HomeBanner from './HomeBanner';
 
-
-
-function Movies() {
+function Home() {
 
   return (
     <div className="Movies">
-
-      <Moviesbanner></Moviesbanner>
-      
-      <MovieRow></MovieRow>
-
+      <Nav></Nav>
+      <HomeBanner></HomeBanner>
     </div>  
   );
 }
 
-export default Movies;
+export default Home;
