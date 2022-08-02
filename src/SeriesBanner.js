@@ -18,10 +18,9 @@ function SeriesBanner(){
 
           //data retrieval request  
           const request = await axios.get(data.seriesType);
-          const guid = await axios.get(data.guidTest);
 
           const size = request.data.length;  
-          const random = Math.floor(Math.random() * (size + 1));
+          const random = Math.floor(Math.random() * (size));
           console.log(request.data);
 
           //data storage
@@ -54,12 +53,8 @@ function SeriesBanner(){
          <h1 className="banner__rating">{"| RATING : " + rating + " | YEAR : " + year + " | EPISODES : " + episodes + " |"}</h1>
         <h1 className="banner__overview"><i>{"Overview: "}</i></h1>
         <h1 className="banner__description">{text}</h1>
-
-        
         </div>   
     </header>
     );
 }
     export default SeriesBanner;
-        
-            

@@ -12,7 +12,6 @@ function Movies() {
     <div className="Movies">
 
       <Moviesbanner></Moviesbanner>
-      
       <MovieRow></MovieRow>
 
     </div>  

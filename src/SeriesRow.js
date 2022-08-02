@@ -43,7 +43,7 @@ function SeriesRow() {
                 <div className='row__posters'>
                     
                     {action.map(action => (
-                        <img className="row__poster"src={action.metadata.images[0].url} alt={action.name}/>                       
+                        <img className="row__poster"src={action.metadata.images[1].url} alt={action.name}/>                       
                         
                     ))}
 
@@ -53,7 +53,7 @@ function SeriesRow() {
                 <div className='row__posters'>
                     
                     {adventure.map(adventure => (
-                        <img className="row__poster"src={adventure.metadata.images[0].url} alt={adventure.name}/>                       
+                        <img className="row__poster"src={adventure.metadata.images[1].url} alt={adventure.name}/>                       
                         
                     ))}
 

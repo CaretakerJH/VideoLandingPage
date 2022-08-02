@@ -6,7 +6,7 @@ function CollectionBackground(){
     return(
         <header className="collection__banner"
         style={{backgroundSize: "cover",
-        backgroundImage: `url('https://t4.ftcdn.net/jpg/03/26/59/69/360_F_326596944_m7WkrlErKIg1W2HAIzuOWUwGZ5R54v4h.jpg')`,
+        backgroundImage: `url('https://cdnb.artstation.com/p/assets/images/images/000/982/789/large/keith-chan-kein-wah-il1201-1-keithchan-1201129-l12.jpg?1437512045&dl=1')`,
         backgroundposition: "center center",
         }}
     >

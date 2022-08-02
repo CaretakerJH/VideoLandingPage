@@ -1,4 +1,5 @@
 import './App.css';
+import './index.css';
 import Nav from './Nav';
 import {Route, Routes, Link} from 'react-router-dom';
 import React from 'react';
@@ -6,8 +7,6 @@ import Home from './Home';
 import Collections from './Collections';
 import Movies from './Movies';
 import Series from './Series';
-
-
 
 
 function App() {

@@ -1,10 +1,10 @@
 .row{
-    color:red;
+    color:#CFF2FF;
     margin-left:20px;
 }
 
 .collection__Title{
-    color:white;
+    color:#CFF2FF;
     
 }
 
@@ -31,7 +31,7 @@ padding:7px;
     max-height: 150px;
     transition: transform 450ms; 
     margin-right:10px;
-    background-color: black;
+    background-color: 090909;
 }
 
 .row__poster:hover
@@ -42,4 +42,13 @@ padding:7px;
 
 .row__Title{
     padding-top: 30px;
+}
+
+.row__Collectionposters{
+    object-fit: contain;
+    width: 100%;
+    max-height: 150px;
+    transition: transform 450ms; 
+    margin-right:10px;
+    background-color: black;
 }
