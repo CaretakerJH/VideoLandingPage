@@ -9,8 +9,7 @@ function MovieRow() {
     const [movies, setMovies] = useState([]);
     const [title, setTitle] = useState([]);
     const [counter, setCounter] = useState(0);
-
-
+    
       //A snippet of code which runs based on a specific condition or variable.
         useEffect(() => {
             //requesting data from URL
@@ -22,8 +21,6 @@ function MovieRow() {
             fetchData();
         }, []);
 
-
-
          return (
              <div className="row">
                 {/* title */}
@@ -33,7 +30,6 @@ function MovieRow() {
                     
                     {movies.map(movie => (
                         <img className="row__poster"src={movie.metadata.images[0].url} alt={movie.name}/>
-
                     ))}
 
                 </div>
