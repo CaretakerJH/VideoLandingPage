@@ -6,30 +6,23 @@ import data from "./data.js";
 
 function SeriesBanner(){
     //variable creation
-    const [movie, setMovieBackground] = useState([]);
-    const [text, setDescription] = useState([]);
-    const [title, setTitle] = useState([]);
-    const [rating, setRating] = useState([]);
-    const [year, setYear] = useState([]);
-    const [episodes, setEpisodeCount] = useState();
+    const [feature, setFeatured] = useState([]);
+    const [featuredBackground, setFeaturedBackground] = useState([]);
 
     useEffect(() => {
         async function fetchData(){
 
           //data retrieval request  
           const request = await axios.get(data.seriesType);
-
           const size = request.data.length;  
-          const random = Math.floor(Math.random() * (size));
-          console.log(request.data);
-
+          const random = Math.floor(Math.floor(Math.random() * size));
+          const featured = request.data[random];
+          const featuredBackground = featured.metadata.images[1].url
           //data storage
-          setMovieBackground(request.data[random].metadata.images[1].url);
-          setDescription( request.data[random].description);
-          setTitle(request.data[random].name);
-          setRating(request.data[random].rating);
-          setYear(request.data[random].year);
-          setEpisodeCount(request.data[random].children.length);
+          setFeatured(featured);
+          setFeaturedBackground(featuredBackground);
+
+          console.log(featured);
           return request;
         }
         fetchData();
@@ -38,21 +31,22 @@ function SeriesBanner(){
     return(
         <header className="banner"
         style={{backgroundSize: "cover",
-        backgroundImage: `url(${movie})`,
+        backgroundImage: `url(${featuredBackground})`,
         backgroundposition: "center center",
         }}
     >
         <div className="banner__contents">
-          <h1 className ="banner__title">{title}</h1>
+          <h1 className ="banner__title">{feature.name}</h1>
 
           <div className="banner__buttons">
              <button className ="banner__button">Play</button>
              <button className ="banner__button">My List</button>
              
          </div>
-         <h1 className="banner__rating">{"| RATING : " + rating + " | YEAR : " + year + " | EPISODES : " + episodes + " |"}</h1>
+         <h1 className="banner__rating">{"| RATING : " + feature.rating + " | YEAR : " + feature.year + " |"}</h1>
         <h1 className="banner__overview"><i>{"Overview: "}</i></h1>
-        <h1 className="banner__description">{text}</h1>
+        <h1 className="banner__description">{feature.description}</h1>
+        
         </div>   
     </header>
     );

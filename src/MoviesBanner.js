@@ -22,7 +22,6 @@ function Moviesbanner(){
           setFeatured(featured);
           setFeaturedBackground(featuredBackground);
 
-          console.log(featured);
           return request;
         }
         fetchData();

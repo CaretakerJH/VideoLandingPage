@@ -28,6 +28,7 @@ function SeriesRow() {
                 setAction(act.data);
                 setAdventure(adv.data);
                 setAnimation(ani.data);
+                console.log(act);
                 return request;
             }
             fetchData();

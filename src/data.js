@@ -19,7 +19,9 @@ const data = {
     ironCollection: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/254577e9-58a8-4c19-ac60-8cbb0f169425',
     Bingeollection: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/72b616ba-b480-42d0-ab1e-b9cf85253dac',
     watchCollection: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/c9fba34e-d6e3-4c96-b3db-ae264b77efcb',
-    starCollection: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/6e764bc7-af18-430f-b48c-3540b2f3a4e1'
+    starCollection: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/6e764bc7-af18-430f-b48c-3540b2f3a4e1',
+
+    baseURL: 'https://d1chb2avsvwxer.cloudfront.net/'
 
 }
 
