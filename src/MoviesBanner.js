@@ -21,7 +21,7 @@ function Moviesbanner(){
           //data storage
           setFeatured(featured);
           setFeaturedBackground(featuredBackground);
-
+          console.log(request);
           return request;
         }
         fetchData();

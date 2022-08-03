@@ -7,6 +7,7 @@ import ReactHlsPlayer from "react-hls-player";
 
 
 function Player({url}) {
+  console.log(url);
 
   const refPlayer = React.useRef();
   const percentCurrent = React.useRef(0);
@@ -45,7 +46,7 @@ function Player({url}) {
       ready.current = false;
     }
 
-    // ใช้แทน onReady
+    //
   }
   function timeupdate(e) {
     const duration = refPlayer.current.duration;

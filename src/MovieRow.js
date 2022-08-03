@@ -16,16 +16,24 @@ function MovieRow() {
 
     {/* setting state for creating variables in react */}
     const [movies, setMovies] = useState([]);
-    const [title, setTitle] = useState([]);
-    const [counter, setCounter] = useState(0);
-    
+    const [action, setAction] = useState([]);
+    const [adventure, setAdventure] = useState([]);
+    const [animation, setAnimation] = useState([]);
+
       //A snippet of code which runs based on a specific condition or variable.
         useEffect(() => {
 
             //requesting data from URL
             async function fetchData(){              
                 const request = await axios.get(data.movieType);
+                const act = await axios.get(data.actionGenre);
+                const adv = await axios.get(data.adventureGenre);
+                const ani = await axios.get(data.animationGenre);
+
                 setMovies(request.data);
+                setAction(act.data);
+                setAdventure(adv.data);
+                setAnimation(ani.data);
 
                 return request;
             }
@@ -35,15 +43,13 @@ function MovieRow() {
         const navigateToPlayer = ({obj}) => {
             const fullURl = baseURL + obj;
             const rootElement = document.getElementById("root");
+
+            
             
             console.log(fullURl);
             
-            render(
-                <Nav/>,
-                ReactDOM.render(<Player url={fullURl} />, rootElement)
-            )
-            
-            
+            navigate('/player')
+            ReactDOM.render(<Player url={fullURl} />, rootElement);
         }
         
 
@@ -70,6 +76,42 @@ function MovieRow() {
                     ))}
 
                 </div>
+
+                <h2 >{"Action"}</h2>
+                {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
+                <div className='row__posters'>
+                    
+                    {action.map(action => (
+
+                       <img key={action.name}
+                        className="row__poster"src={action.metadata.images[0].url} 
+                        alt={action.name}/>                       
+                       
+                    ))}
+
+                </div>  
+                <h2 >{"Adventure"}</h2>
+                {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
+                <div className='row__posters'>
+                    
+                    {adventure.map(adventure => (
+                        <img key={adventure.name} 
+                        className="row__poster"src={adventure.metadata.images[0].url} 
+                        alt={adventure.name}/>
+                    ))}
+
+                </div>  
+                <h2 >{"Animation"}</h2>
+                {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
+                <div className='row__posters'>
+                    
+                    {animation.map(animation => (
+                        <img key={animation.name} 
+                        className="row__poster"src={animation.metadata.images[1].url} 
+                        alt={animation.name}/>                     
+                        
+                    ))}
+                </div>  
                 
              </div>
     )

@@ -10,9 +10,6 @@ function SeriesRow() {
     const [action, setAction] = useState([]);
     const [adventure, setAdventure] = useState([]);
     const [animation, setAnimation] = useState([]);
-    const [counter, setCounter] = useState(0);
-
-
 
       //A snippet of code which runs based on a specific condition or variable.
         useEffect(() => {
@@ -24,11 +21,13 @@ function SeriesRow() {
                 const adv = await axios.get(data.adventureGenre);
                 const ani = await axios.get(data.animationGenre);
 
+
+
                 setMovies(request.data);
                 setAction(act.data);
                 setAdventure(adv.data);
                 setAnimation(ani.data);
-                console.log(act);
+
                 return request;
             }
             fetchData();
@@ -38,14 +37,15 @@ function SeriesRow() {
 
          return (
              <div className="row">
-                {/* title */}
+                
                 <h2 >{"Action"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div className='row__posters'>
                     
                     {action.map(action => (
-                        <img className="row__poster"src={action.metadata.images[1].url} alt={action.name}/>                       
-                        
+
+                       <img className="row__poster"src={action.metadata.images[1].url} alt={action.name}/>                       
+                       
                     ))}
 
                 </div>  

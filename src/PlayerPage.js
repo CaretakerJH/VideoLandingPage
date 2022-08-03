@@ -6,15 +6,20 @@ import Nav from './Nav.js';
 
 
 
-function PlayerPage() {
+function PlayerPage(key) {
+  console.log(key);
+  
   const rootElement = document.getElementById("root");
   return (
     <div className="App">
      <Nav></Nav>
-     <div className="specialPlayer">
-      <Player  url=''/>   
-
-      </div>  
+     <header className="player__banner"
+        style={{backgroundSize: "cover",
+        backgroundImage: `url('https://w.wallhaven.cc/full/z8/wallhaven-z872wo.jpg')`,
+        backgroundposition: "center center",
+        }}
+    >
+    </header> 
     </div>  
   );
 }
