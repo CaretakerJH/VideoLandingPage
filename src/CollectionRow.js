@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './row.css';
 import data from './data';
-import {Routes,useNavigate,} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import Player from './Player';
-import ReactDOM, { render } from "react-dom";
-import Nav from "./Nav";
+import ReactDOM from "react-dom";
+
 
 
 function MovieRow() {
