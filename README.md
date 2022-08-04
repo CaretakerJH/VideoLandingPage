@@ -1,7 +1,7 @@
 Video-Landing-Page  - Created by Julian Herr
 
 
-SPECIFIC INSTRUCTIONSs:
+SPECIFIC INSTRUCTIONS:
 
 1. Install Node.js
 2. Install NPM via CMD Terminal [command: npm install -g npm]
@@ -20,8 +20,8 @@ SPECIFIC INSTRUCTIONSs:
 
 INSTRUCTIONS TO NAVIGATE APP:
 
-You are able to scroll through the showreels with (SHIFT + Scroll)
-When clicking on a showreel item and it redirects you to the browser player - once completed watching please press F5/Refresh. This would be changed via a button etc.
+1. You are able to scroll through the showreels with (SHIFT + Scroll)
+2. When clicking on a showreel item and it redirects you to the browser player - once completed watching please press F5/Refresh. This would be changed via a button etc.
 
 _____________________________________________________________________________________________________________________
 
