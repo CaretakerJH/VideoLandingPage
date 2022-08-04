@@ -10,6 +10,8 @@ function SeriesRow() {
     const [action, setAction] = useState([]);
     const [adventure, setAdventure] = useState([]);
     const [animation, setAnimation] = useState([]);
+    const [featuredchildren, setFeaturedChildren] = useState([]);
+    
 
       //A snippet of code which runs based on a specific condition or variable.
         useEffect(() => {
@@ -20,21 +22,28 @@ function SeriesRow() {
                 const act = await axios.get(data.actionGenre);
                 const adv = await axios.get(data.adventureGenre);
                 const ani = await axios.get(data.animationGenre);
+                
 
-
-
+                console.log(act);
                 setMovies(request.data);
                 setAction(act.data);
                 setAdventure(adv.data);
                 setAnimation(ani.data);
 
                 return request;
+
             }
             fetchData();
         }, []);
 
+        function checkGenre(x)
+        {
+            return x.type === "series" ? true: false;
+        }
 
+        console.log(animation);
 
+  
          return (
              <div className="row">
                 
@@ -43,8 +52,8 @@ function SeriesRow() {
                 <div className='row__posters'>
                     
                     {action.map(action => (
-
-                       <img className="row__poster"src={action.metadata.images[1].url} alt={action.name}/>                       
+                       
+                       checkGenre(action) == true ? <img key={action.name} className="row__poster"src={action.metadata.images[1].url} alt={action.name}/> : <div></div>                      
                        
                     ))}
 
@@ -54,23 +63,13 @@ function SeriesRow() {
                 <div className='row__posters'>
                     
                     {adventure.map(adventure => (
-                        <img className="row__poster"src={adventure.metadata.images[1].url} alt={adventure.name}/>                       
-                        
+                         checkGenre(adventure) == true ? <img key={adventure.name} className="row__poster"src={adventure.metadata.images[1].url} alt={adventure.name}/> : <div></div>
                     ))}
 
                 </div>  
-                <h2 >{"Animation"}</h2>
-                {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
-                <div className='row__posters'>
-                    
-                    {animation.map(animation => (
-                        <img className="row__poster"src={animation.metadata.images[1].url} alt={animation.name}/>                       
-                        
-                    ))}
-                </div>  
+                
                 
              </div>
-             
     )
 }
 

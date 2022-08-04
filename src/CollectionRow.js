@@ -87,7 +87,7 @@ function MovieRow() {
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div className='row__posters'>
                 {starwars.map(starwars => (
-                         <img key={starwars.name} onClick={() => handleClick(starwars.objectKey)} className="row__poster"src={starwars.metadata.images[0].url} alt={starwars.name}/>                       
+                         <img key={starwars.name} onClick={() => handleClick(starwars.objectKey)} className="row__poster"src={starwars.metadata.images[1].url} alt={starwars.name}/>                       
                     ))}
                 </div>
                 
@@ -96,14 +96,14 @@ function MovieRow() {
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div className='row__posters'>
                 {ani.map(ani => (
-                        <img key={ani.name} onClick={() => handleClick(ani.objectKey)} className="row__poster"src={ani.metadata.images[0].url} alt={ani.name}/>                       
+                        <img key={ani.name} onClick={() => handleClick(ani.objectKey)} className="row__poster"src={ani.metadata.images[1].url} alt={ani.name}/>                       
                     ))}
                 </div>
                 <h2 >{"Jurrasic Park Collection"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div className='row__posters'>
                 {jp.map(jp => (
-                        <img key={jp.name} onClick={() => handleClick(jp.objectKey)} className="row__poster"src={jp.metadata.images[0].url} alt={jp.name}/>                       
+                        <img key={jp.name} onClick={() => handleClick(jp.objectKey)} className="row__poster"src={jp.metadata.images[1].url} alt={jp.name}/>                       
                     ))}
                 </div>
 
@@ -135,7 +135,7 @@ function MovieRow() {
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div className='row__posters'>
                 {bingewatch.map(bingewatch => (
-                        <img className="row__poster"src={bingewatch.metadata.images[0].url} alt={bingewatch.name}/>                       
+                        <img key={bingewatch.name} onClick={() => handleClick(bingewatch.objectKey)} className="row__poster"src={bingewatch.metadata.images[0].url} alt={bingewatch.name}/>                       
                     ))}
                 </div>
 

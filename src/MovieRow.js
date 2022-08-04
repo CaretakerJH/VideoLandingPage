@@ -59,6 +59,12 @@ function MovieRow() {
            
         }
 
+        function checkGenre(x)
+        {
+            return x.type === "movie" ? true: false;
+        }
+        console.log(action);
+
          return (
              <div className="row">
                 {/* title */}
@@ -82,10 +88,8 @@ function MovieRow() {
                 <div className='row__posters'>
                     
                     {action.map(action => (
-
-                       <img key={action.name}
-                        className="row__poster"src={action.metadata.images[0].url} 
-                        alt={action.name}/>                       
+                        
+                        checkGenre(action) == true ? <img key={action.name} onClick={() => handleClick(action.objectKey)} className="row__poster"src={action.metadata.images[1].url} alt={action.name}/> : <div></div>  
                        
                     ))}
 
@@ -95,9 +99,7 @@ function MovieRow() {
                 <div className='row__posters'>
                     
                     {adventure.map(adventure => (
-                        <img key={adventure.name} 
-                        className="row__poster"src={adventure.metadata.images[0].url} 
-                        alt={adventure.name}/>
+                        checkGenre(adventure) == true ? <img key={adventure.name} onClick={() => handleClick(adventure.objectKey)} className="row__poster"src={adventure.metadata.images[1].url} alt={adventure.name}/> : <div></div>  
                     ))}
 
                 </div>  
@@ -106,9 +108,7 @@ function MovieRow() {
                 <div className='row__posters'>
                     
                     {animation.map(animation => (
-                        <img key={animation.name} 
-                        className="row__poster"src={animation.metadata.images[1].url} 
-                        alt={animation.name}/>                     
+                        checkGenre(animation) == true ? <img key={animation.name} onClick={() => handleClick(animation.objectKey)} className="row__poster"src={animation.metadata.images[1].url} alt={animation.name}/> : <div></div>  
                         
                     ))}
                 </div>  

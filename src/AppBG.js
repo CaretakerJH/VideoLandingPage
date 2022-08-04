@@ -3,15 +3,14 @@ import Nav from './Nav.js';
 
 
 
-function PlayerPage() {
-  
+function AppBG() {
   const rootElement = document.getElementById("root");
   return (
     <div className="App">
      <Nav></Nav>
      <header className="player__banner"
         style={{backgroundSize: "cover",
-        backgroundImage: `url('https://w.wallhaven.cc/full/z8/wallhaven-z872wo.jpg')`,
+        backgroundImage: `url('https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_star-forming_region_carina_nircam_final-5mb.jpg')`,
         backgroundposition: "center center",
         }}
     >
@@ -20,4 +19,4 @@ function PlayerPage() {
   );
 }
 
-export default PlayerPage;
+export default AppBG;

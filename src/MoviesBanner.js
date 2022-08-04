@@ -2,9 +2,13 @@ import "./banner.css";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import data from "./data.js";
-
+import {useNavigate,} from 'react-router-dom';
+import Player from './Player';
 
 function Moviesbanner(){
+
+    const navigate = useNavigate();
+    const baseURL = 'https://d1chb2avsvwxer.cloudfront.net/';
     //storage creation
     const [feature, setFeatured] = useState([]);
     const [featuredBackground, setFeaturedBackground] = useState([]);
@@ -45,7 +49,7 @@ function Moviesbanner(){
              
          </div>
         <h1 className="banner__rating">{"| RATING : " + feature.rating + " | YEAR : " + feature.year + " |"}</h1>
-        <h1 className="banner__overview"><i>{"Overview: "}</i></h1>
+        <h1 className="banner__overview">{"Overview: "}</h1>
         <h1 className="banner__description">{feature.description}</h1>
 
         

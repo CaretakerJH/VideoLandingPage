@@ -1,7 +1,7 @@
 .banner{
     color: white;
     object-fit:  contain;
-    height: 780px;
+    height: 810px;
 }
 
 .collection__banne{
@@ -9,9 +9,10 @@
 }
 
 .banner__overview{
+    color:#CFF2FF;
     width: 60rem;
     line-height:1.3;
-    padding-top:1rem;
+    padding-top:35px;
     font-size: 1.15rem;
     max-width:500px;
     height:20px;
