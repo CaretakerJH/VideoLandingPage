@@ -1,7 +1,7 @@
 Video-Landing-Page  - Created by Julian Herr
 
 
-Specific instructions:
+SPECIFIC INSTRUCTIONSs:
 
 1. Install Node.js
 2. Install NPM via CMD Terminal [command: npm install -g npm]
@@ -18,7 +18,10 @@ Specific instructions:
 6. Use the command line, type [npm start]
 7. This should automatically open up http://localhost:3000/ in your web browser - if not, manually open the URL up
 
-(Please use chrome/microsoft edge)
+INSTRUCTIONS TO NAVIGATE APP:
+
+You are able to scroll through the showreels with (SHIFT + Scroll)
+When clicking on a showreel item and it redirects you to the browser player - once completed watching please press F5/Refresh. This would be changed via a button etc.
 
 _____________________________________________________________________________________________________________________
 
