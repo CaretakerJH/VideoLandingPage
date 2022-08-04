@@ -25,8 +25,6 @@ function MovieRow() {
     const [watchagain, setWATCH] = useState([]);
     const [starwars, setSTAR] = useState([]);
 
-
-    
       //A snippet of code which runs based on a specific condition or variable.
         useEffect(() => {
 
@@ -90,8 +88,7 @@ function MovieRow() {
                          <img key={starwars.name} onClick={() => handleClick(starwars.objectKey)} className="row__poster"src={starwars.metadata.images[1].url} alt={starwars.name}/>                       
                     ))}
                 </div>
-                
-
+            
                 <h2 >{"Animated Shorts"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div className='row__posters'>
