@@ -2,18 +2,24 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './row.css';
 import data from './data';
-import {Routes,useNavigate,} from 'react-router-dom';
+import {useNavigate,} from 'react-router-dom';
 import Player from './Player';
 import ReactDOM, { render } from "react-dom";
-import Nav from "./Nav";
+import Swiper, { Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 
 
 function MovieRow() {
-    
+    const swiper = new Swiper('.swiper', {
+        // configure Swiper to use modules
+        modules: [Navigation, Pagination],
+      });
     const navigate = useNavigate();
-
     const baseURL = 'https://d1chb2avsvwxer.cloudfront.net/';
-
     {/* setting state for creating variables in react */}
     const [movies, setMovies] = useState([]);
     const [action, setAction] = useState([]);
@@ -66,6 +72,7 @@ function MovieRow() {
         console.log(action);
 
          return (
+            
              <div className="row">
                 {/* title */}
                 <h2 >{"More Movies"}</h2>

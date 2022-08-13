@@ -2,7 +2,6 @@ import './App.css';
 import Nav from './Nav.js';
 
 
-
 function AppBG() {
   const rootElement = document.getElementById("root");
   return (
@@ -15,6 +14,7 @@ function AppBG() {
         }}
     >
     </header> 
+
     </div>  
   );
 }

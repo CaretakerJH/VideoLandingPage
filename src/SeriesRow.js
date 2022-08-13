@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './row.css';
 import data from './data';
+import SwiperRow from './SwiperRow.js';
 
 function SeriesRow() {
 
@@ -68,8 +69,9 @@ function SeriesRow() {
 
                 </div>  
                 
-                
+             <SwiperRow></SwiperRow>
              </div>
+             
     )
 }
 
