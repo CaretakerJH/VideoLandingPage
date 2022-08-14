@@ -1,6 +1,6 @@
-import './App.css';
+import './styles/app.css';
 import Nav from './Nav.js';
-
+import './styles/styles.css';
 
 function AppBG() {
   const rootElement = document.getElementById("root");
@@ -14,7 +14,6 @@ function AppBG() {
         }}
     >
     </header> 
-
     </div>  
   );
 }

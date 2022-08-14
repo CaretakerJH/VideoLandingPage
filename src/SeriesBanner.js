@@ -27,14 +27,11 @@ function SeriesBanner(){
           const featured = request.data[random];
           const featuredBackground = featured.metadata.images[1].url;
           const featuredchildren = featured.children;
-          console.log(featuredchildren);
 
           //data storage
           setFeatured(featured);
           setFeaturedBackground(featuredBackground);
           setFeaturedChildren(featuredchildren);
-
-          console.log(featured);
           return request;
         }
         fetchData();

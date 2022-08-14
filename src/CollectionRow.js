@@ -157,6 +157,7 @@ function MovieRow() {
                     ))}
 
                 </div>
+    
          
              </div>
     )

@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/app.css';
 import data from './data';
 import MovieRow from './MovieRow';
 import Nav from './Nav';

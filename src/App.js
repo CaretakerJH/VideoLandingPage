@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/app.css';
 import './index.css';
 import Nav from './Nav';
 import {Route, Routes, Link} from 'react-router-dom';
@@ -10,12 +10,14 @@ import Player from './Player.js';
 import PlayerPage from './PlayerPage';
 import AppBG from './AppBG';
 
+
+
 function App() {
 
   return (
     <div className="App">
       <Nav></Nav>
-      <Routes><Route  path="/" exact element={<AppBG/>}/></Routes>
+      <Routes><Route  path="/" exact element={<Collections/>}/></Routes>
       <Routes><Route  path="/series" exact element={<Series/>}/></Routes>
       <Routes><Route  path="/landingpage" exact element={<Collections/>}/></Routes>
       <Routes><Route  path="/movies" exact element={<Movies/>}/></Routes>
