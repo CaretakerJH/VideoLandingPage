@@ -1,15 +1,16 @@
-import './styles/app.css';
-import MovieRow from './MovieRow';
-import Nav from './Nav';
-import MoviesBanner from './MoviesBanner.js'
+import '../styles/app.css';
+import Row from '../components/row';
+import Nav from '../services/nav.js';
+import Banner from '../components/banner';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import data from "./data.js";
+import data from '../data';
 
-function Movies() {
+function MoviesTest() {
 
   const [feature, setFeatured] = useState([]);
   const [featuredBackground, setFeaturedBackground] = useState([]);
+
   useEffect(() => {
       async function fetchData(){
         //data retrieval request  
@@ -19,9 +20,9 @@ function Movies() {
         const featured = request.data[random];
         const featuredBackground = featured.metadata.images[1].url
         //data storage
+
         setFeatured(featured);
         setFeaturedBackground(featuredBackground);
-        console.log(request);
         return request;
       }
       fetchData();
@@ -29,9 +30,10 @@ function Movies() {
 
   return (
     <div className="Movies">
-      <MoviesBanner feature={feature} featuredBackground={featuredBackground}></MoviesBanner>
-      <MovieRow></MovieRow>
+      <Banner feature={feature} featuredBackground={featuredBackground}></Banner>
+      <Row></Row>
     </div>  
+    
   );
 }
-export default Movies;
+export default MoviesTest;

@@ -1,6 +1,6 @@
 import './styles/app.css';
 import Nav from './Nav.js';
-
+import TestPage from './pages/test';
 
 
 function PlayerPage() {
@@ -17,6 +17,7 @@ function PlayerPage() {
     >
     </header> 
     </div>  
+    
   );
 }
 

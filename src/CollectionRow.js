@@ -5,12 +5,13 @@ import data from './data';
 import SwiperRow from './SwiperRow.js';
 
 
-function MovieRow() {
+function CollectionRow() {
 
     {/* setting state for creating variables in react */}
     const [collections, setCollections] = useState([]);
       //A snippet of code which runs based on a specific condition or variable.
         useEffect(() => {
+
             //requesting data from URL
             async function fetchData(){              
                 const request = await axios.get(data.collectionType);
@@ -31,4 +32,5 @@ function MovieRow() {
              </div>
     )
 }
-export default MovieRow
+
+export default CollectionRow;

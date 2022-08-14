@@ -2,13 +2,12 @@ import "./banner.css";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import data from "./data.js";
+import {useNavigate,} from 'react-router-dom';
+import Player from './Player';
 
 
-function Moviesbanner ({feature, featuredBackground}) {
-    //storage creation
-    
+function CollectionBanner ({feature, featuredBackground}) {
     return(
-        
         <header className="banner"
         style={{backgroundSize: "cover",
         backgroundImage: `url(${featuredBackground})`,
@@ -26,12 +25,10 @@ function Moviesbanner ({feature, featuredBackground}) {
         <h1 className="banner__rating">{"| RATING : " + feature.rating + " | YEAR : " + feature.year + " |"}</h1>
         <h1 className="banner__overview"><i>{"Overview: "}</i></h1>
         <h1 className="banner__description">{feature.description}</h1>
-
-        
         </div>   
     </header>
     );
 }
-    export default Moviesbanner;
+    export default CollectionBanner;
         
             

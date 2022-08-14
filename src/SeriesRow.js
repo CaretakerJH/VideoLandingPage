@@ -3,6 +3,7 @@ import axios from 'axios';
 import './row.css';
 import data from './data';
 import SwiperRow from './SwiperRow.js';
+import Showreel from './components/showreel.js';
 
 function SeriesRow() {
 

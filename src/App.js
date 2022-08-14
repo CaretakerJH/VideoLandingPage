@@ -6,26 +6,18 @@ import React from 'react';
 import Collections from './Collections';
 import Movies from './Movies';
 import Series from './Series';
-import Player from './Player.js';
 import PlayerPage from './PlayerPage';
-import AppBG from './AppBG';
-
-
+import MoviesTest from './pages/movies';
 
 function App() {
-
   return (
     <div className="App">
       <Nav></Nav>
       <Routes><Route  path="/" exact element={<Collections/>}/></Routes>
       <Routes><Route  path="/series" exact element={<Series/>}/></Routes>
-      <Routes><Route  path="/landingpage" exact element={<Collections/>}/></Routes>
-      <Routes><Route  path="/movies" exact element={<Movies/>}/></Routes>
+      <Routes><Route  path="/movies" exact element={<MoviesTest/>}/></Routes>
       <Routes><Route  path="/player" exact element={<PlayerPage/>}/></Routes>
     </div>  
   );
-
   }
-
-
 export default App;
