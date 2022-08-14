@@ -4,15 +4,12 @@ import './row.css';
 import data from './data';
 import SwiperRow from './SwiperRow.js';
 
-
-
 function SeriesRow() {
 
     {/* setting state for creating variables in react */}
     const [movies, setMovies] = useState([]);
     const actionMovies = [];
     const adventureMovies = [];
-
 
       //A snippet of code which runs based on a specific condition or variable.
         useEffect(() => {
@@ -34,7 +31,6 @@ function SeriesRow() {
 
         genreGrouping(movies, "Action", actionMovies);
         genreGrouping(movies, "Adventure", adventureMovies);
-
 
          return (
              <div className="row">

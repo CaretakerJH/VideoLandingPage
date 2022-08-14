@@ -49,12 +49,8 @@ function SeriesBanner(){
             navigate('/player')
             ReactDOM.render(<Player url={fullURl} />, rootElement);
         }
-        
-
         const handleClick = (obj) => {
-
            navigateToPlayer({obj});
-           
         }
 
     return(

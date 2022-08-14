@@ -40,10 +40,10 @@ function MovieRow() {
          return ( 
              <div className="row">
                 {/* title */}
-                <h2 >{"More Movies"}</h2>
+                <h2 >{"Animation"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div>
-                <SwiperRow mediaList={movies}></SwiperRow>
+                <SwiperRow mediaList={animationMovies}></SwiperRow>
                 </div>
                 <h2 >{"Action"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
@@ -55,10 +55,11 @@ function MovieRow() {
                 <div>
                 <SwiperRow mediaList={adventureMovies}></SwiperRow>
                 </div>  
-                <h2 >{"Animation"}</h2>
+                
+                <h2 >{"More Movies"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div>
-                <SwiperRow mediaList={animationMovies}></SwiperRow>
+                <SwiperRow mediaList={movies}></SwiperRow>
                 </div>
              </div>
     )
