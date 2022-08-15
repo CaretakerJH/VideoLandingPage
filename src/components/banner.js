@@ -1,8 +1,5 @@
 import "../banner.css";
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import data from "../data.js";
-
 
 function Banner({feature, featuredBackground}){
 

@@ -1,10 +1,10 @@
 import '../styles/app.css';
-import Row from '../components/row';
-import Nav from '../services/nav.js';
+import Movierow from '../components/rows/movierow';
 import Banner from '../components/banner';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import data from '../data';
+import Seriesrow from '../components/rows/seriesrow';
 
 function MoviesTest() {
 
@@ -31,7 +31,7 @@ function MoviesTest() {
   return (
     <div className="Movies">
       <Banner feature={feature} featuredBackground={featuredBackground}></Banner>
-      <Row></Row>
+      <Movierow></Movierow>
     </div>  
     
   );

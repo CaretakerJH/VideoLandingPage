@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './row.css';
-import data from './data';
-import SwiperRow from './SwiperRow.js';
-import Showreel from './components/showreel.js';
+import '../../row.css';
+import data from '../../data';
+import Showreel from '../showreel';
 
-function SeriesRow() {
+function Seriesrow() {
 
     {/* setting state for creating variables in react */}
     const [movies, setMovies] = useState([]);
@@ -32,17 +31,16 @@ function SeriesRow() {
 
         genreGrouping(movies, "Action", actionMovies);
         genreGrouping(movies, "Adventure", adventureMovies);
-        console.log(adventureMovies);
 
          return (
              <div className="row">
                 <h2>{"Action"}</h2>
-                <SwiperRow mediaList={actionMovies}></SwiperRow>
+                <Showreel mediaList={actionMovies}></Showreel>
                 <h2>{"Adventure"}</h2>
-                <SwiperRow mediaList={adventureMovies}></SwiperRow>
+                <Showreel mediaList={adventureMovies}></Showreel>
              </div>
              
 
     )
 }
-export default SeriesRow
+export default Seriesrow

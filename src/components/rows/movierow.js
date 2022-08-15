@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../row.css';
-import data from '../services/data';
-import Showreel from './showreel';
+import '../../row.css';
+import data from '../../data';
+import Showreel from '../showreel';
 
-function Row() {
+function Movierow() {
     {/* setting state for creating variables in react */}
     const [movies, setMovies] = useState([]);
     const actionMovies = [];
@@ -61,4 +61,4 @@ function Row() {
     )
 }
 
-export default Row
+export default Movierow

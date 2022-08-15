@@ -13,24 +13,6 @@ function Player({url}) {
   const percentCurrent = React.useRef(0);
   const ready = React.useRef(true);
 
-  // const file_url =
-  //   "https://1500001829.vod2.myqcloud.com/d368e14cvodtransth1500001829/c60cc3a45285890814092312570/adp.10.m3u8";
-
-  // const key = "vRBEuiSSGQRlObHaIkw2";
-  // const dir = "/d368e14cvodtransth1500001829/c60cc3a45285890814092312570/";
-  // const t = Math.round(new Date().getTime() / 1000 + 9999).toString(16);
-  // console.log(t, "tttt");
-  // const exper = 6000;
-  // const rlimit = 3;
-  // console.log(
-  //   Math.round(new Date().getTime() / 1000 + 9999),
-  //   "new Date().getTime()"
-  // );
-  // const us = Math.round(Math.random() * 10000000);
-  // const sign = md5(key + dir + t + us);
-  // const protectedKey = `t=${t}&us=${us}&sign=${sign}`;
-  // console.log(`${file_url}?t=${t}&us=${us}&sign=${sign}`);
-
   React.useEffect(() => {
     // console.log(refPlayer.currentTime());
     if (refPlayer && refPlayer.current) {

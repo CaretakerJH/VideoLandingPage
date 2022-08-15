@@ -6,16 +6,23 @@
   width: 100%;
   height: 100%;
 }
+.episode-swiper-container{
+  width: 100%;
+  height: 100%;
+}
 
 .swiper-slide{
   text-align: center;
   font-size: 18px; 
-  
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+.episode-image{
+  max-width: 100%;
+  height: 220px;
 }
 
   .swiper-slide:hover {

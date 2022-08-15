@@ -27,7 +27,17 @@ function SwiperRow({mediaList}) {
             )
         }}
 
-        else
+        else if (mediaList.type = "episode"){
+            for (let i = 0; i < mediaList.length; i++)
+            slides.push(
+                <SwiperSlide className='episode-swiper-container' key={`slide-${i}`}>
+                    <img className='episode-image' src={mediaList[i].metadata.images[0].url} 
+                    alt={`Slide ${i}`}></img>
+                </SwiperSlide>
+            )
+            console.log('Action Movies');
+        }
+        else 
         {for (let i = 0; i < mediaList.length; i++)
             {
                 slides.push(
@@ -36,6 +46,7 @@ function SwiperRow({mediaList}) {
                         alt={`Slide ${i}`}></img>
                     </SwiperSlide>
                 )
+                
             }}
 
         const navigateToPlayer = ({obj}) => {

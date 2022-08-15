@@ -5,10 +5,10 @@ import '../styles/styles.css';
 import {useNavigate} from 'react-router-dom';
 import Player from '../Player';
 import ReactDOM from "react-dom";
-
 SwiperCore.use([Navigation, Pagination, A11y])
 
 function Showreel({mediaList}) {
+    
     const navigate = useNavigate();
     const baseURL = 'https://d1chb2avsvwxer.cloudfront.net/';
     const slides = [];
