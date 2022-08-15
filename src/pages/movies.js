@@ -4,7 +4,7 @@ import Banner from '../components/banner';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import data from '../data';
-import Seriesrow from '../components/rows/seriesrow';
+
 
 function MoviesTest() {
 

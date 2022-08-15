@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../player.css";
+import "../styles/player.css";
 // import md5 from "md5";
 // import ReactFlowPlayer from "react-flow-player";
 import ReactHlsPlayer from "react-hls-player";
 
 
-function Player({url}) {
+function UpdatedPlayer({url}) {
   console.log(url);
 
   const refPlayer = React.useRef();
@@ -73,7 +73,7 @@ function Player({url}) {
   );
 }
 
-export default Player;
+export default UpdatedPlayer;
 
 
 

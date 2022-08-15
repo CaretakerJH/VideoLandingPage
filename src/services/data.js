@@ -1,4 +1,4 @@
-const data = {
+const information = {
 
     /*strings to the location of the types of films */
     collectionType: 'https://sqjqk3kqk3.execute-api.eu-west-1.amazonaws.com/stage/content/type/<collection>',

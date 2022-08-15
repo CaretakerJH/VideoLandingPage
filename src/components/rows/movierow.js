@@ -33,6 +33,14 @@ function Movierow() {
         genreGrouping(movies, "Adventure", adventureMovies);
         genreGrouping(movies, "Animation", animationMovies);
 
+        function arrayShuffle(list){
+            list = list.sort(() => Math.random() - 0.5)
+        }
+        
+        arrayShuffle(actionMovies);
+        arrayShuffle(adventureMovies);
+        arrayShuffle(animationMovies);
+
          return ( 
              <div className="row">
                 {/* title */}

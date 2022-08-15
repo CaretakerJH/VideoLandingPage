@@ -1,46 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import '../row.css';
-import data from '../data';
-import Showreel from '../components/showreel';
+import '../styles/app.css';
+import Nav from '../services/nav';
 
-function TestPage() {
-
-    {/* setting state for creating variables in react */}
-    const [movies, setMovies] = useState([]);
-    const actionMovies = [];
-    const adventureMovies = [];
-
-      //A snippet of code which runs based on a specific condition or variable.
-        useEffect(() => {
-            //requesting data from URL
-            async function fetchData(){              
-                const request = await axios.get(data.seriesType);
-                setMovies(request.data);
-                return request;
-            }
-            fetchData();
-        }, []);
-
-        function genreGrouping(list, string, finalList)
-            {list.map((item) => (
-                (item.genre.includes(string))
-                  ? (finalList.push(item))
-                  : null
-            ))}
-
-        genreGrouping(movies, "Action", actionMovies);
-        genreGrouping(movies, "Adventure", adventureMovies);
-
-         return (
-             <div className="row">
-                <h2>{"Action"}</h2>
-                <Showreel mediaList={actionMovies}></Showreel>
-                <h2>{"Adventure"}</h2>
-                <Showreel mediaList={adventureMovies}></Showreel>
-             </div>
-             
-
-    )
+function PlayerTest() {
+  
+  const rootElement = document.getElementById("root");
+  return (
+    <div className="App">
+     <Nav></Nav>
+     <header className="player__banner"
+        style={{backgroundSize: "cover",
+        backgroundImage: `url('https://w.wallhaven.cc/full/z8/wallhaven-z872wo.jpg')`,
+        backgroundposition: "center center",
+        }}
+    >
+    </header> 
+    </div>  
+    
+  );
 }
-export default TestPage;
+
+export default PlayerTest;

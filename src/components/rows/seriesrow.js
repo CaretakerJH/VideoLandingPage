@@ -28,7 +28,7 @@ function Seriesrow() {
                   ? (finalList.push(item))
                   : null
             ))}
-
+  
         genreGrouping(movies, "Action", actionMovies);
         genreGrouping(movies, "Adventure", adventureMovies);
 
