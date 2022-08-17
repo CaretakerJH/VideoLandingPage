@@ -28,7 +28,6 @@ function UpdatedPlayer({url}) {
       ready.current = false;
     }
 
-    //
   }
   function timeupdate(e) {
     const duration = refPlayer.current.duration;
@@ -72,7 +71,6 @@ function UpdatedPlayer({url}) {
     </div>
   );
 }
-
 export default UpdatedPlayer;
 
 

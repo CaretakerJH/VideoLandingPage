@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../../row.css';
 import data from '../../data';
 import Showreel from '../showreel';
 
@@ -33,14 +32,15 @@ function Seriesrow() {
         genreGrouping(movies, "Adventure", adventureMovies);
 
          return (
-             <div className="row">
-                <h2>{"Action"}</h2>
+            <>
+             <div>
+                <h2 class="text-white font-bold md:text-xl p-4">{"Action"}</h2>
                 <Showreel mediaList={actionMovies}></Showreel>
-                <h2>{"Adventure"}</h2>
+                <h2 class="text-white font-bold md:text-xl p-4">{"Adventure"}</h2>
                 <Showreel mediaList={adventureMovies}></Showreel>
              </div>
-             
+             </>
 
-    )
+    );
 }
 export default Seriesrow

@@ -5,10 +5,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import data from '../data';
 
+
 function LandingTest() {
 
     const [feature, setFeatured] = useState([]);
-    const [collections, setCollections] = useState([]);
     const [featuredBackground, setFeaturedBackground] = useState([]);
     useEffect(() => {
         async function fetchData(){
@@ -22,9 +22,6 @@ function LandingTest() {
           //data storage
           setFeatured(featured);
           setFeaturedBackground(featuredBackground);
-          setCollections(collection);
-          console.log(collection)
-          console.log(request);
           return request;
         }
         fetchData();

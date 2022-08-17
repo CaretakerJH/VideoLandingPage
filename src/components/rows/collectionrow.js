@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../../row.css';
+import './stylerow.css';
 import data from '../../data';
 import Showreel from '../showreel';
 
@@ -24,7 +24,7 @@ function Collectionrow() {
              <div className="row">
                 {collections.map(collection => (
                     <div>
-                        <h2 >{collection.name}</h2>
+                        <h2 class="text-white font-bold md:text-xl p-4">{collection.name}</h2>
                         <Showreel mediaList={collection}></Showreel>
                         </div>
                     ))}

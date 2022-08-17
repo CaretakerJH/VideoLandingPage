@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../../row.css';
+import './stylerow.css';
 import data from '../../data';
 import Showreel from '../showreel';
 
@@ -44,23 +44,23 @@ function Movierow() {
          return ( 
              <div className="row">
                 {/* title */}
-                <h2 >{"Animation"}</h2>
+                <h2 class="text-white font-bold md:text-xl p-4">{"Animation"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div>
                 <Showreel mediaList={animationMovies}></Showreel>
                 </div>
-                <h2 >{"Action"}</h2>
+                <h2 class="text-white font-bold md:text-xl p-4">{"Action"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div>
                 <Showreel mediaList={actionMovies}></Showreel>
                 </div>  
-                <h2 >{"Adventure"}</h2>
+                <h2 class="text-white font-bold md:text-xl p-4">{"Adventure"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div>
                 <Showreel mediaList={adventureMovies}></Showreel>
                 </div>  
                 
-                <h2 >{"More Movies"}</h2>
+                <h2 class="text-white font-bold md:text-xl p-4">{"More Movies"}</h2>
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div>
                 <Showreel mediaList={movies}></Showreel>
