@@ -11,7 +11,7 @@ import "tailwindcss/tailwind.css";
 
 function App() {
   return (
-    <div className="w-[800px] sm:w-[640px]h-[620px] md:w-[1260px] lg:w-[1260px] xl:w-[1900px]">
+    <div className="w-[800px] sm:w-[60px]h-[620px] md:w-[1260px] lg:w-[1260px] xl:w-[1900px]">
       <Nav></Nav>
       <Routes><Route  path="/" exact element={<LandingTest/>}/></Routes>
       <Routes><Route  path="/series" exact element={<SeriesTest/>}/></Routes>

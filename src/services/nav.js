@@ -13,7 +13,7 @@ function Nav(){
             src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png?20201013161117"
             alt="Netflix Profile"    
             />
-            
+
             <li className="links"><Link to="/">LANDING PAGE</Link></li>
             <li className="links"><Link to="/movies">MOVIES</Link></li>
             <li className="links"><Link to="/series">SERIES</Link></li>

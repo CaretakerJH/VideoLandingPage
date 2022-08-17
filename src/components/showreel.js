@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, A11y } from 'swiper'
 import '../styles/styles.css';
@@ -14,7 +14,7 @@ function Showreel({mediaList}) {
     const slides = [];
     console.log(mediaList);
 
-      if (mediaList.type == "collection" || mediaList.type == "movies")
+      if (mediaList.type === "collection")
     {for (let i = 0; i < mediaList.childCount; i++)
         {
             slides.push(
@@ -33,7 +33,6 @@ function Showreel({mediaList}) {
                     alt={`Slide ${i}`}></img>
                 </SwiperSlide>
             )
-            console.log('Action Movies');
         }
 
         const navigateToPlayer = ({obj}) => {
@@ -59,7 +58,7 @@ function Showreel({mediaList}) {
                 navigation
                 pagination
                 onClick={(slides) =>
-                 mediaList.type == "collection" ? 
+                 mediaList.type === "collection" ? 
                  handleClick(mediaList.children[slides.clickedIndex].objectKey) : 
                  handleClick(mediaList[slides.clickedIndex].objectKey)}>{slides}</Swiper>
             </React.Fragment>
