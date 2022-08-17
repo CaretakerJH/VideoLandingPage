@@ -6,7 +6,7 @@ import axios from 'axios';
 import data from '../data';
 
 
-function LandingTest() {
+function Landing() {
 
     const [feature, setFeatured] = useState([]);
     const [featuredBackground, setFeaturedBackground] = useState([]);
@@ -14,7 +14,6 @@ function LandingTest() {
         async function fetchData(){
           //data retrieval request  
           const request = await axios.get(data.movieType);
-          const collection = await axios.get(data.collectionType);
           const size = request.data.length;  
           const random = Math.floor(Math.floor(Math.random() * size));
           const featured = request.data[random];
@@ -35,4 +34,4 @@ function LandingTest() {
   );
 }
 
-export default LandingTest;
+export default Landing;

@@ -1,9 +1,8 @@
 import '../styles/app.css';
 import Nav from '../services/nav';
 
-function PlayerTest() {
+function Player() {
   
-  const rootElement = document.getElementById("root");
   return (
     <div className="App">
      <Nav></Nav>
@@ -15,8 +14,8 @@ function PlayerTest() {
     >
     </header> 
     </div>  
-    
+
   );
 }
 
-export default PlayerTest;
+export default Player;

@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "../styles/player.css";
 // import md5 from "md5";
 // import ReactFlowPlayer from "react-flow-player";
@@ -59,7 +58,6 @@ function UpdatedPlayer({url}) {
   return (
     <div className="Player">
       <ReactHlsPlayer
-        
         playerRef={refPlayer}
         src={url}
         controls={true}

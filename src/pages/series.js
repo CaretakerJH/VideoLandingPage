@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Seriesrow from '../components/rows/seriesrow';
 
-function SeriesTest() {
+function Series() {
   const [feature, setFeatured] = useState([]);
   const [featuredBackground, setFeaturedBackground] = useState([]);
   const [featuredchildren, setFeaturedChildren] = useState([]);
@@ -36,4 +36,4 @@ function SeriesTest() {
   );
 }
 
-export default SeriesTest;
+export default Series;

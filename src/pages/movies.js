@@ -6,7 +6,7 @@ import axios from 'axios';
 import data from '../data';
 
 
-function MoviesTest() {
+function Movies() {
 
   const [feature, setFeatured] = useState([]);
   const [featuredBackground, setFeaturedBackground] = useState([]);
@@ -36,4 +36,4 @@ function MoviesTest() {
     
   );
 }
-export default MoviesTest;
+export default Movies;
