@@ -31,7 +31,7 @@ function Banner({feature, featuredBackground, featuredchildren}){
     }
     else {
         return(
-            <header className="translate-x-[-125px] h-[800px] sm:translate-x-[0px]"
+        <header className="translate-x-[-125px] h-[800px] sm:translate-x-[0px]"
         style={{backgroundSize: "cover",
         backgroundImage: `url(${featuredBackground})`,
         backgroundposition: "center center",
@@ -54,6 +54,7 @@ function Banner({feature, featuredBackground, featuredchildren}){
                 {/* cmovies.map -> map iterates through each of the movie objects and obtains the path from the movie array. */}
                 <div className="invisible sm:invisible md:invisible lg:visible">
                 <Showreel mediaList={featuredchildren}></Showreel>
+                
                 </div>
                 </div>
                 </header>

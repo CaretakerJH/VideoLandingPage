@@ -5,20 +5,16 @@ SPECIFIC INSTRUCTIONS:
 
 1. Install Node.js
 2. Install NPM via CMD Terminal [command: npm install -g npm]
-8. Using the command line, run these three commands in order to get the dependancies organized:
-[
-[npm install axios],
-[npm install --save react-router-dom],
-[npm install --save react-hls-player --legacy-peer-deps],
-[npm install swiper],
-[npm install -D tailwindcss]
-]
-
 3. Open visual studio code
 4. Open VideoLandingPage-main in the editor
-5. Open a terminal, type [cd VideoLandingPage-main]
-6. Use the command line, type [npm start]
-7. This should automatically open up http://localhost:3000/ in your web browser - if not, manually open the URL up.
+5. Using the command line, run these three commands in order to get the dependancies organized:
+[
+[npm install react-scripts --legacy-peer-dep],
+[npm install swiper --legacy-peer-dep ],
+]
+6. Open a terminal, type [cd VideoLandingPage-main]
+7. Use the command line, type [npm start]
+8. This should automatically open up http://localhost:3000/ in your web browser - if not, manually open the URL up.
 
 INSTRUCTIONS TO NAVIGATE APP:
 
